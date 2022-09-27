@@ -1,0 +1,19 @@
+@import '../../../../styles/colors.module.scss';
+.skillsSection{
+    min-height: 100vh;  
+    color:$color-text;
+    header{
+        margin-top:4rem;
+    }
+    .title{
+        font-size: 3rem;
+        text-align: center;
+        margin: 0;
+    }
+
+    p{
+        text-align: center;
+        color:$color-text-opaque
+    }
+
+  }

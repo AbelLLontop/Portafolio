@@ -1,0 +1,66 @@
+@import "../../../../styles/colors.module.scss";
+.headerSection {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+
+  .profileHeader {
+    max-width: 40rem;
+    color: $color-text;
+    .logoPeru {
+      display: flex;
+      gap: 16px;
+      span {
+        width: 12px;
+        height: 12px;
+        background: rgb(239, 27, 27);
+      }
+      span:nth-child(2) {
+        background-color: $color-text;
+      }
+    }
+    h1,
+    p {
+      margin: 0;
+    }
+    .description {
+      margin: 0.8rem 0;
+      color: $color-text-opaque;
+    }
+    h1 {
+      font-weight: 400;
+      font-size: 4rem;
+    }
+    p {
+      font-size: 1rem;
+      font-weight: lighter;
+    }
+    .buttons {
+      button {
+        border: none;
+      }
+      .btn_linkedin {
+        font-size: 1rem;
+        border-radius: 4px;
+        display: flex;
+        gap: 0.4rem;
+
+        align-items: center;
+        background-color: #0e76a8;
+        color: white;
+        padding: 0.4rem;
+      }
+    }
+  }
+  .profileDecoration {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    @media screen and (max-width: 768px) {
+
+        display: none !important;
+
+    }
+  }
+}

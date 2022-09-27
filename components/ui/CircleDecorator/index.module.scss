@@ -1,0 +1,32 @@
+@import "../../../styles/colors.module.scss";
+.circleDecorator{
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .line{
+        display:block;
+        height: 100px;  
+        width: 1px;
+    }
+    .circle{
+        display: block;
+        border-radius: 50%; 
+        width: 40px;
+        display: flex;
+        align-items: center;
+        color:$background-color;
+        justify-content: center;
+        font-weight: bold;
+        height: 40px;
+    }
+    .text{
+        display: block;
+        font-size: 2rem;
+        color: transparent;
+        font-weight: bold;  
+        background-clip: text;
+        margin-bottom: 0;
+
+    }
+}
