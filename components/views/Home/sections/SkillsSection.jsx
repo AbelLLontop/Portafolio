@@ -8,7 +8,7 @@ import Lenguage from "../../../ui/Lenguage";
 const SkillsSection = () => {
   return (
     <section className={styles.skillsSection}>
-      <CircleDecorator title="Skills" colorLeft={color_start} colorEnd={color_end} />
+      <CircleDecorator number={1} title="Skills" colorLeft={color_start} colorEnd={color_end} />
       <header>
         <h2  className={styles.title}>Programming Languages</h2>
         <p className={styles.description}>Algunos de los lenguajes aplicados para el <span>desarrollo web</span>  y <span>desarrollo mobil</span></p>

@@ -14,8 +14,14 @@
     .links{
 
       .select{
+        transform: translateX(0px);
+        padding-left: 20px;
         color:#cb8bff ;
         border-bottom: solid 3px #9c1fff;
+        span{
+          transform: translateX(0px);
+          opacity: 1;
+        }
       }
       a{
         cursor: default;

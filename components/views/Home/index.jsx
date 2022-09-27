@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import Head from "next/head";
 import styles from "./index.module.scss";
+import ExperiencesSection from "./sections/ExperiencesSection";
 import HeaderSection from "./sections/HeaderSection";
 import ProjectsSection from "./sections/ProjectsSection";
 import SkillsSection from "./sections/SkillsSection";
@@ -22,6 +23,7 @@ const Home = () => {
       <main className={styles.main}>
         <HeaderSection/>
         <SkillsSection/>
+        <ExperiencesSection/>
         <ProjectsSection/>
       </main>
 

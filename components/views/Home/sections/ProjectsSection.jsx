@@ -6,7 +6,7 @@ const ProjectsSection = () => {
   return (
     <section className={styles.skillsSection}>
    
-      <CircleDecorator number={2} title="Projects" colorLeft='rgb(132, 255, 1)' colorEnd='rgb(0, 198, 3)'  />
+      <CircleDecorator number={3} title="Projects" colorLeft='rgb(132, 255, 1)' colorEnd='rgb(0, 198, 3)'  />
      
     <header>
       <h2 className={styles.title}>2022</h2>

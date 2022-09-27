@@ -1,0 +1,111 @@
+@import '../../../../styles/colors.module.scss';
+$color-start:rgb(255, 52, 184);
+$color-end:rgb(186, 68, 255);
+
+:export{
+    color_start: $color-start;
+    color_end: $color-end;
+  }
+
+
+.experienceSection{
+    min-height: 100vh;  
+    color:$color-text;
+    padding-bottom: 2rem;
+    overflow: hidden;
+    .title{
+        font-size: 3rem;
+        text-align: center;
+        margin: 0; 
+        font-weight: lighter;
+        color: $color-start;
+        position: relative;
+    }
+    .description{
+     span{
+            color: $color-end;
+     }
+    }
+
+    p{
+        text-align: center;
+        color:$color-text-opaque;
+        font-weight: lighter;
+    }
+    .experiences{
+        margin-top: 2rem;
+        padding: 2em;
+        
+    }
+    .experienceContent{
+        display: flex;
+        justify-content: center;
+        .experience::after{
+            content:'';
+            top:50%;
+            width: 100%;
+            height: 4px;
+            border-top: dashed 4px $color-end;
+            position: absolute;
+        }
+    }
+
+    .experienceContent:nth-child(2n+1){
+        
+        .experience::after{
+            
+            left: -100%;
+           
+        }
+    }
+    .experienceContent:nth-child(2n){
+        .experience::after{
+            content:'';
+
+            right: -100%;
+       
+        }
+    }
+
+    .experience{
+        position: relative;
+        padding: 1rem;
+        margin: 1rem;
+        align-self: n;
+        border-radius: .4rem;
+        width: 400px;
+        background: #00000038;
+        ;
+        h3,p{
+            margin: 0;
+            color:$color-text;
+            text-align: left;
+        }
+        header{
+           
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            h3{
+                color: $color-start;
+            }
+            p{
+                color: $color-end;
+            }
+            
+            img{
+                width: 3.2rem;
+                height: 3.2rem;
+                border-radius: 1rem;
+            }
+        }
+        footer{
+            display: flex;
+            flex-direction: column;
+            font-weight: lighter;
+            color:$color-text-opaque;
+            font-size: .8rem;
+        }
+    }
+  }
+ 
