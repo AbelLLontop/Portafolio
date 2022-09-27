@@ -7,6 +7,9 @@ import SkillsSection from "./sections/SkillsSection";
 
 
 const Home = () => {
+
+
+
   return (
     <div className={styles.app}>
     <div className={styles.container}>
@@ -15,14 +18,14 @@ const Home = () => {
         <meta name="description" content="Web and mobile developer" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-    
+
       <main className={styles.main}>
         <HeaderSection/>
         <SkillsSection/>
         <ProjectsSection/>
       </main>
 
-      <footer className={styles.footer}></footer>
+<footer className={styles.footer}></footer>
     </div>
     </div>
   );

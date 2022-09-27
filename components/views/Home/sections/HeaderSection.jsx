@@ -13,7 +13,9 @@ const HeaderSection = () => {
           <span></span>
           <span></span>
         </div>
+
         <h1>Abelitolll Dev</h1>
+
         <p>Frontend Developer | Mobile Developer</p>
         <p className={styles.description}>
           💻👨‍💻 Entusiasta, autodidacta y cómodo trabajando en equipo, siempre
@@ -31,7 +33,17 @@ const HeaderSection = () => {
         </div>
       </article>
       <article className={styles.profileDecoration}>
-        <Image className={styles.photo} src={image} alt="Picture of the author" layout="fixed" width={400} height={400} style={{borderRadius:"50%"}} />
+        <div className={styles.photoContent}>
+          <Image
+            className={styles.photo}
+            src={image}
+            alt="Picture of the author"
+            layout="fixed"
+            width={400}
+            height={400}
+            style={{ borderRadius: "50%" }}
+          />
+        </div>
       </article>
 
       <MouseScroll />

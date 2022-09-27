@@ -2,15 +2,17 @@ import React from 'react'
 import styles from './index.module.scss'
 
 const Header = () => {
+  
+
   return (
     <header className={styles.header}>
         <nav>
           <div className={styles.items}>
             <a href="#">Logo</a>
           </div>
-          <ul className={styles.items}>
+          <ul className={`${styles.items} ${styles.links}`}>
             <li>
-              <a href="#">Home</a>
+              <a className={styles.select} href="#">Home</a>
             </li>
             <li>
               <a href="#">Proyects</a>
