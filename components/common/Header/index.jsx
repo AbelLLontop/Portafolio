@@ -1,6 +1,8 @@
-import React from 'react'
-import styles from './index.module.scss'
-
+import React from 'react';
+import styles from './index.module.scss';
+import {AiFillHome,AiOutlineFundProjectionScreen} from 'react-icons/ai';
+import {BsChatSquareTextFill} from 'react-icons/bs';
+import {RiContactsFill} from 'react-icons/ri';
 const Header = () => {
   
 
@@ -12,13 +14,17 @@ const Header = () => {
           </div>
           <ul className={`${styles.items} ${styles.links}`}>
             <li>
-              <a className={styles.select} href="#">Home</a>
+             
+              <a className={styles.select} href="#"> Home<span><AiFillHome/></span></a>
             </li>
             <li>
-              <a href="#">Proyects</a>
+              <a href="#">Proyects<span><AiOutlineFundProjectionScreen/></span></a>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <a href="#">Blog<span><BsChatSquareTextFill/></span></a>
+            </li>
+            <li>
+              <a href="#">Contact<span><RiContactsFill/></span></a>
             </li>
           </ul>
 

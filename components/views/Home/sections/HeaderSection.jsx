@@ -38,7 +38,6 @@ const HeaderSection = () => {
             className={styles.photo}
             src={image}
             alt="Picture of the author"
-            layout="fixed"
             width={400}
             height={400}
             style={{ borderRadius: "50%" }}
