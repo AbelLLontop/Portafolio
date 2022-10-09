@@ -1,9 +1,9 @@
-import Header from '../components/common/Header'
+import NavBar from '../components/common/NavBar'
 import '../styles/globals.css'
 
 
 function MyApp({ Component, pageProps }) {
-  return <><Header/><Component {...pageProps} /></>
+  return <><NavBar/><Component {...pageProps} /></>
 }
 
 export default MyApp

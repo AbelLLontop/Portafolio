@@ -1,13 +1,23 @@
 @import "../../../../styles/colors.module.scss";
+@import "../../../../styles/common.module.scss";
 .headerSection {
   display: flex;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;  
   position: relative;
+  @media (max-width: $lg){
+    flex-direction: column;
+    padding-top:4rem;
+  }
 
   .profileHeader {
     max-width: 40rem;
     color: $color-text;
+    margin-right: 4rem;
+    @media (max-width: $lg){
+      margin-right: 0;
+      padding: 0 2rem;
+    }
     .logoPeru {
       display: flex;
       gap: 16px;
@@ -26,56 +36,63 @@
     }
     .description {
       margin: 0.8rem 0;
-      color: $color-text-opaque;
+      color: $color-text;
+      font-family: 'Poppins';
+      text-align: justify;
+      
     }
     h1 {
-      font-weight: 400;
-      font-size: 4rem;
+      font-weight: bold;
+      font-size: 4rem; 
+      @media (max-width: $lg){
+        font-size:2rem;
+        line-height: 3.6rem;
+        margin-bottom: 1rem;
+      }
     }
     p {
       font-size: 1rem;
       font-weight: lighter;
     }
+    .skills{
+      padding: 0.2rem 0.4rem;
+      border-radius: 0.3rem;
+      background: linear-gradient(45deg, rgba(156, 31, 255, 0.4196078431), rgba(255, 17, 17, 0));
+      margin-top: -18px;
+      font-family: 'Poppins';
+      font-size: .8rem;
+    }
     .buttons {
-      button {
-        border: none;
-      }
-      .btn_linkedin {
-        font-size: 1rem;
-        border-radius: 4px;
-        display: flex;
-        gap: 0.4rem;
-
-        align-items: center;
-        background-color: #0e76a8;
-        color: white;
-        padding: 0.4rem;
-      }
+      display: flex;
+      gap: 1rem;
     }
   }
+  
+
   .profileDecoration {
     flex-grow: 1;
     display: flex;
     justify-content: center;
-    @media screen and (max-width: 600px) {
-      display: none !important;
+    @media (max-width:$lg){
+      order:-1;
+      align-items: center;
     }
     .photoContent {
       position: relative;
       overflow: hidden;
       min-width: 200px;
       min-height: 200px;
+      border:solid 1rem rgba(45, 62, 118, 0.316);
+      @media (max-width:$lg){
+        width: 8rem;
+        height: 8rem;
+        border:solid .4rem rgba(45, 62, 118, 0.316);
+      }
       border-radius: 50%;
+   
     }
-    .photoContent::after {
-      display: block;
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      background: linear-gradient(#0b0c1b00, #0b0c1b9e);
+    .photo{
+      object-fit: cover;
     }
   }
 }

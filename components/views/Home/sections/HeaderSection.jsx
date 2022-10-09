@@ -1,22 +1,23 @@
 import Image from "next/image";
 import React from "react";
-import { BsLinkedin } from "react-icons/bs";
 import image from "../../../../public/images/perfilLinkedin.jpg";
+import BtnGithub from "../../../ui/Buttons/BtnGithub";
+import BtnLinkedin from "../../../ui/Buttons/BtnLinkedin";
 import MouseScroll from "../../../ui/MouseScroll";
 import styles from "./HeaderSection.module.scss";
 const HeaderSection = () => {
   return (
+    <div className={styles.container}>
     <section className={styles.headerSection}>
       <article className={styles.profileHeader}>
         <div className={styles.logoPeru}>
-          <span></span>
+          <span></span> 
           <span></span>
           <span></span>
         </div>
+        <h1>Abel Llontop</h1>
 
-        <h1>Abelitolll Dev</h1>
-
-        <p>Frontend Developer | Mobile Developer</p>
+        <p className={styles.skills}>Frontend Developer | Mobile Developer</p>
         <p className={styles.description}>
           💻👨‍💻 Entusiasta, autodidacta y cómodo trabajando en equipo, siempre
           dispuesto aprender y desenvolverme de la mejor manera posible en
@@ -26,10 +27,8 @@ const HeaderSection = () => {
           con kotlin!!
         </p>
         <div className={styles.buttons}>
-          <button className={styles.btn_linkedin}>
-            <BsLinkedin />
-            Linkedin
-          </button>
+         <BtnGithub/>
+         <BtnLinkedin/>
         </div>
       </article>
       <article className={styles.profileDecoration}>
@@ -47,6 +46,7 @@ const HeaderSection = () => {
 
       <MouseScroll />
     </section>
+    </div>
   );
 };
 

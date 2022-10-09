@@ -1,4 +1,6 @@
-  .message {
+
+@import "../../../styles/sizes.module.scss";
+.message {
     margin-left: -55px;
   }
   @-webkit-keyframes ani-mouse {
@@ -62,6 +64,9 @@
       right: 0;
       bottom: 1rem;
       text-align: center;
+       @media (max-width: $lg){
+        display: none;
+      }
   }
   .scrollBtn > * {
       display: inline-block;

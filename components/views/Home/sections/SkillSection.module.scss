@@ -1,41 +1,43 @@
-@import '../../../../styles/colors.module.scss';
-$color-start:rgb(1, 69, 255);
-$color-end:rgb(0, 198, 188);
-.skillsSection{
-    min-height: 100vh;  
-    color:$color-text;
-    padding-bottom: 2rem;
-    header{
-        margin-top:1rem;
-    }
-    .title{
-        font-size: 3rem;
-        text-align: center;
-        margin: 0; 
-        font-weight: lighter;
-        color: $color-start;
-        position: relative;
-    }
-    .description{
-     span{
-            color: $color-end;
-     }
-    }
-    .skills{
-    display: flex;
-    justify-content: space-evenly;
-    gap:1rem;
-    flex-wrap: wrap;
-    margin: 4rem 0;
-    }
-    p{
-        text-align: center;
-        color:$color-text-opaque;
-        font-weight: lighter;
-    }
+@import "../../../../styles/colors.module.scss";
+$color-start: rgb(1, 69, 255);
+$color-end: rgb(0, 198, 188);
+
+.skillsSection {
+  min-height: 100vh;
+  color: $color-text;
+
+  header {
+    margin-top: 1rem;
+  }
+  .title {
+    font-size: 3rem;
+    text-align: center;
+    margin: 0;
+    font-weight: lighter;
+    color: $color-start;
+    position: relative;
 
   }
-  :export{
-    color_start: $color-start;
-    color_end: $color-end;
+  .description {
+
+    span {
+      color: $color-end;
+    }
   }
+  .skills {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 4rem 0;
+  }
+  p {
+    text-align: center;
+    color: $color-text-opaque;
+    font-weight: lighter;
+  }
+}
+:export {
+  color_start: $color-start;
+  color_end: $color-end;
+}

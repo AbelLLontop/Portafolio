@@ -1,0 +1,23 @@
+@import './sizes.module.scss';
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    @media (min-width: $sm) {
+        max-width: 540px;
+    }
+    @media (min-width: $md) {
+        max-width: 720px;
+    }
+    @media (min-width: $lg) {
+        max-width: 960px;
+    }
+    @media (min-width: $xl) {
+        max-width: 1140px;
+    }
+    @media (min-width: $xxl) {
+        max-width: 1320px;
+    }
+}
+ 
