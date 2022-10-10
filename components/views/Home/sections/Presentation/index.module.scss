@@ -1,10 +1,12 @@
 @import "styles/colors.module.scss";
 @import "styles/common.module.scss";
+
 .headerSection {
   display: flex;
   align-items: center;
   min-height: 100vh;  
   position: relative;
+  
   @media (max-width: $lg){
     flex-direction: column;
     padding-top:4rem;

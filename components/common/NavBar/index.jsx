@@ -1,21 +1,41 @@
-import React, {useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import IconoGithub from "components/ui/Buttons/BtnGithub/IconoGithub";
 import IconoLinkedin from "components/ui/Buttons/BtnLinkedin/IconoLinkedin";
-import { AiFillHome, AiOutlineFundProjectionScreen } from "react-icons/ai";
 import { ImMenu } from "react-icons/im";
-import { BsChatSquareTextFill } from "react-icons/bs";
-import { RiContactsFill } from "react-icons/ri";
 import styles from "./index.module.scss";
-
+import { menuList } from "consts/menu";
 
 const NavBar = () => {
-  const {pathname} = useRouter();
   const [menu, setStateMenu] = useState(false);
+  const { pathname } = useRouter();
+  const domHeader = useRef(null)
+  const closeMenu = () => {
+    setStateMenu(false);
+  };
+  useEffect(()=>{
+    if(menu){
+      document.body.style.overflow = "hidden";
+    }else{
+      document.body.style.overflow = "auto";
+    }
+  },[menu])
+
+  useEffect(()=>{
+    const paintNav = ()=>{
+      if(window.scrollY > 0){
+        domHeader.current.classList.add(styles.showBackground)
+      }else{
+        domHeader.current.classList.remove(styles.showBackground)
+      }
+    }
+    window.addEventListener("scroll", paintNav);
+    return () => window.removeEventListener("scroll", paintNav);
+  },[])
 
   return (
-    <header className={styles.container}>
+    <header ref={domHeader} className={styles.container}>
       <nav className={styles.navbar}>
         <div className={styles.logo}>
           <Link href="/">
@@ -23,54 +43,24 @@ const NavBar = () => {
           </Link>
         </div>
         <ul className={`${styles.list_links} ${!menu ? styles.hidden : ""}`}>
-      
-          <li>
-            <Link href="/" >
-              <a onClick={()=>setStateMenu(false)}  className={pathname == "/" ? styles.active : ""}>
-                Home
-                <span>
-                  <AiFillHome />
-                </span>
-              </a>
-            </Link>
+          {menuList.map((item) => (
+            <li key={item.name}>
+              <Link href={item.href}>
+                <a
+                  onClick={closeMenu}
+                  className={pathname === item.href ? styles.active : ""}
+                >
+                  {item.name}
+                  <span>{item.icon}</span>
+                </a>
+              </Link>
+            </li>
+          ))}
+          <li onClick={closeMenu} className={styles.btn_cerrar}>
+            X
           </li>
-          <li>
-            <Link href="/projects">
-              <a onClick={()=>setStateMenu(false)}
-                className={pathname == "/projects" ? styles.active : ""}
-              >
-                Proyects
-                <span>
-                  <AiOutlineFundProjectionScreen />
-                </span>
-              </a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/blog">
-              <a  onClick={() => setStateMenu(false)}  className={pathname == "/blog" ? styles.active : ""}>
-                Blog
-                <span>
-                  <BsChatSquareTextFill />
-                </span>
-              </a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/contact">
-              <a  onClick={() => setStateMenu(false)}  className={pathname == "/contact" ? styles.active : ""}>
-                Contact
-                <span>
-                  <RiContactsFill />
-                </span>
-              </a>
-            </Link>
-          </li>
-          <li onClick={() => setStateMenu(false)} className={styles.btn_cerrar}>X</li>
         </ul>
-       
         <ul className={styles.list_icons}>
-       
           <li>
             <IconoLinkedin />
           </li>

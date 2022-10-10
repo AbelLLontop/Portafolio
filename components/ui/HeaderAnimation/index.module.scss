@@ -1,0 +1,175 @@
+@import "styles/common.module.scss";
+.circulos{
+    filter: blur(2rem) contrast(100);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100% ;
+    height: 100% ;
+    
+    overflow: hidden;
+    .circulo2{
+      // background: linear-gradient(45deg, rgb(31, 46, 255), rgb(255, 17, 17));
+      background: linear-gradient(-45deg, #0400fc, #0a70ff, #23d5b7, #8a00fa);
+      background-size: 400% 400%;
+      width: 600px;
+    height: 600px;
+    opacity: 0.3;
+    left: 40%;
+    top: 60%;
+      position: absolute;
+      border-radius: 50%;
+      animation-name: circle2;
+      animation-duration: 11s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-timing-function: cubic-bezier(0.1, 0, 0.9, 1);
+      @media (max-width:$lg){
+        width: 200px;
+        height: 200px;
+        left: 10%;
+        top: 30%;      
+      }
+    }
+    .circulo3{
+      background: linear-gradient(45deg, rgb(22, 14, 108), rgb(17, 227, 255));
+      background-size: 400% 400%;
+      width: 500px;
+      height: 500px;
+      opacity: 0.2;
+      z-index: -3;
+      left: 50%;
+      top: 50%;
+      position: absolute;
+      border-radius: 50%;
+      animation-name: circle3;
+      animation-duration: 11s;
+      animation-direction: alternate;
+      animation-iteration-count: infinite;
+      animation-timing-function: cubic-bezier(0.1, 0, 0.9, 1);
+      @media (max-width:$lg){
+        width: 400px;
+        height: 400px;
+        left: 15%;
+        top: 15%;      
+      }
+    }
+  }
+  
+  
+  @keyframes circle2 {
+    0% {	
+      background-position: 0% 50%;
+      transform: translateY(-50%) rotate(40deg) translateX(-20%);
+    }
+  
+    25% {
+      transform: translateY(-50%)  skew(15deg, 15deg)
+        rotate(110deg) translateX(-5%);
+    }
+  
+    50% {
+      background-position: 100% 50%;
+      transform: translateY(-50%) rotate(210deg) translateX(-35%);
+    }
+  
+    75% {
+      transform: translateY(-50%) skew(-15deg, -15deg)
+        rotate(300deg) translateX(-10%);
+    }
+  
+    100% {
+      background-position: 0% 50%;
+      transform: translateY(-50%) rotate(400deg) translateX(-20%);
+    }
+  }
+  @keyframes circle3 {
+    0% {
+      background-position: 0% 50%;
+      transform: ranslateX(-15%)
+        translateY(10%);
+    }
+  
+    20% {
+      background-position: 100% 50%;
+      transform: translateX(20%)
+        translateY(-30%);
+    }
+  
+    40% {
+      transform: translateX(-25%)
+        translateY(-45%);
+    }
+  
+    60% {
+      transform: translateX(30%) translateY(20%);
+    }
+  
+    80% {
+      background-position: 0% 50%;
+      transform:  translateX(5%) translateY(35%);
+    }
+  
+    100% {
+      transform: translateX(-15%)
+        translateY(10%);
+    }
+  }
+  
+  
+  
+  .circles{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    .circle{
+      position: absolute;
+      display: block;
+      width: 20px;
+      height: 20px;
+      background: #00bef463;
+      bottom: -150px;
+      animation: animate 2s linear infinite;
+    }
+    .circle:nth-child(1){
+      left: 25%;
+      width: 80px;
+      height: 80px;
+      animation-duration: 18s;
+      animation-delay: 0s;
+      animation-delay: 1;
+    }
+    .circle:nth-child(2){
+      left: 50%;
+      width: 40px;
+      height: 40px;
+      animation-duration: 7s;
+      animation-delay: 7s;
+      animation-delay: 3;
+    }
+    @for $i from 3 through 12 {
+      .circle:nth-child(#{$i}){
+        left: percentage(random(100)/100);
+        $size2: random(100)+20+px;
+        width: $size2;
+        height:$size2;
+        animation-duration: random(20)+2+s;
+        animation-delay: random(20)+2+s;
+      }
+    }
+  }
+  @keyframes animate{
+    0%{
+      opacity: 1;
+      border-radius: 0;
+      transform: translateY(0) rotate(0);
+    }
+    100%{
+      opacity: 0;
+      border-radius: 50%;
+      transform: translateY(-1000px) rotate(720deg);
+    }
+  }
