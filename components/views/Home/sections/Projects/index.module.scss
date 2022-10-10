@@ -6,14 +6,19 @@
         margin-top:4rem;
     }
     .title{
-        font-size: 3rem;
-        text-align: center;
+        font-size: 2rem;
         margin: 0;
+        font-weight: bold;
+        color: rgba(209, 235, 255, 0.744);
+        position: relative;
+        text-align: center;
     }
 
     p{
         text-align: center;
-        color:$color-text-opaque
+        padding: 1rem;
+        color:$color-text-opaque;
+        font-weight: lighter;
     }
 
   }

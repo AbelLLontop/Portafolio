@@ -4,12 +4,7 @@ $color-start: rgb(1, 69, 255);
 $color-end: rgb(0, 198, 188);
 
 .container {
-  min-height: 100vh;
-  color: $color-text;
-
-  header {
-    margin-top: 1rem;
-  }
+  color: #fff;
   .title {
     font-size: 2rem;
     margin: 0;
@@ -29,9 +24,10 @@ $color-end: rgb(0, 198, 188);
   .skills {
     display: flex;
     justify-content: center;
-    gap: 4rem;
+    gap: 1rem;
     flex-wrap: wrap;
-    margin: 1rem 0;
+    margin-bottom: 1rem;
+    padding: 1rem 0;
   }
   p {
     text-align: center;
