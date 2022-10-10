@@ -1,11 +1,11 @@
 import Image from "next/image";
 import React from "react";
-import image from "../../../../public/images/perfilLinkedin.jpg";
-import BtnGithub from "../../../ui/Buttons/BtnGithub";
-import BtnLinkedin from "../../../ui/Buttons/BtnLinkedin";
-import MouseScroll from "../../../ui/MouseScroll";
-import styles from "./HeaderSection.module.scss";
-const HeaderSection = () => {
+import image from "public/images/perfilLinkedin.jpg";
+import BtnGithub from "components/ui/Buttons/BtnGithub";
+import BtnLinkedin from "components/ui/Buttons/BtnLinkedin";
+import MouseScroll from "components/ui/MouseScroll";
+import styles from "./index.module.scss";
+const PresentationSection = () => {
   return (
     <div className={styles.container}>
     <section className={styles.headerSection}>
@@ -50,4 +50,4 @@ const HeaderSection = () => {
   );
 };
 
-export default HeaderSection;
+export default PresentationSection;

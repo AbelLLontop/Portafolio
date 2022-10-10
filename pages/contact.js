@@ -1,5 +1,5 @@
 import React from 'react'
-import Contact from '../components/views/Contact'
+import Contact from 'components/views/Contact'
 
 const ContactPage = () => {
   return <Contact/>

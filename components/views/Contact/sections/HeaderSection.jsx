@@ -1,5 +1,5 @@
 import React from 'react'
-import BtnLinkedin from '../../../ui/Buttons/BtnLinkedin';
+import BtnLinkedin from 'components/ui/Buttons/BtnLinkedin';
 import styles from './HeaderSection.module.scss';
 
 const HeaderSection = () => {

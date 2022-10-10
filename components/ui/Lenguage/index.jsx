@@ -7,6 +7,7 @@ const Lenguage = ({icon,name}) => {
       {icon}
       <span
       className={styles.text}>{name}</span>
+      <span className={styles.nivel}>Intemedio</span>
     </article>
   );
 };

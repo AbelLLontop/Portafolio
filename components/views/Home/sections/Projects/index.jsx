@@ -1,6 +1,6 @@
 import React from 'react'
-import CircleDecorator from '../../../ui/CircleDecorator'
-import styles from './ProjectsSection.module.scss'
+import CircleDecorator from 'components/ui/CircleDecorator'
+import styles from './index.module.scss'
 
 const ProjectsSection = () => {
   return (

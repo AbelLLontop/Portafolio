@@ -1,8 +1,9 @@
-@import "../../../../styles/colors.module.scss";
+@import "styles/colors.module.scss";
+@import "styles/common.module.scss";
 $color-start: rgb(1, 69, 255);
 $color-end: rgb(0, 198, 188);
 
-.skillsSection {
+.container {
   min-height: 100vh;
   color: $color-text;
 
@@ -10,26 +11,27 @@ $color-end: rgb(0, 198, 188);
     margin-top: 1rem;
   }
   .title {
-    font-size: 3rem;
-    text-align: center;
+    font-size: 2rem;
     margin: 0;
-    font-weight: lighter;
-    color: $color-start;
+    font-weight: bold;
+    color: rgba(209, 235, 255, 0.744);
     position: relative;
+    text-align: center;
 
   }
   .description {
-
+    text-align: center;
+    padding: 1rem;
     span {
-      color: $color-end;
+      color: rgb(1, 221, 255);
     }
   }
   .skills {
     display: flex;
-    justify-content: space-evenly;
-    gap: 1rem;
+    justify-content: center;
+    gap: 4rem;
     flex-wrap: wrap;
-    margin: 4rem 0;
+    margin: 1rem 0;
   }
   p {
     text-align: center;

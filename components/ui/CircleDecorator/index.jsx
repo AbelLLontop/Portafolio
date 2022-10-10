@@ -1,4 +1,4 @@
-import { background_color } from "../../../styles/colors.module.scss";
+import { background_color } from "styles/colors.module.scss";
 import React from "react";
 import styles from "./index.module.scss";
 

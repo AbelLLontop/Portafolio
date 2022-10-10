@@ -1,13 +1,13 @@
 import React, {useState } from "react";
-import styles from "./index.module.scss";
+import { useRouter } from "next/router";
+import Link from "next/link";
+import IconoGithub from "components/ui/Buttons/BtnGithub/IconoGithub";
+import IconoLinkedin from "components/ui/Buttons/BtnLinkedin/IconoLinkedin";
 import { AiFillHome, AiOutlineFundProjectionScreen } from "react-icons/ai";
+import { ImMenu } from "react-icons/im";
 import { BsChatSquareTextFill } from "react-icons/bs";
 import { RiContactsFill } from "react-icons/ri";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import IconoGithub from "../../ui/Buttons/BtnGithub/IconoGithub";
-import IconoLinkedin from "../../ui/Buttons/BtnLinkedin/IconoLinkedin";
-import { ImMenu } from "react-icons/im";
+import styles from "./index.module.scss";
 
 
 const NavBar = () => {

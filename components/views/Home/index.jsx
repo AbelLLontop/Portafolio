@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/alt-text */
 import Head from "next/head";
 import styles from "./index.module.scss";
-import HeaderSection from "./sections/HeaderSection";
-import ProjectsSection from "./sections/ProjectsSection";
-import SkillsSection from "./sections/SkillsSection";
+import PresentationSection from "./sections/Presentation";
+import ProjectsSection from "./sections/Projects";
+import SkillsSection from "./sections/Skills";
 
 const Home = () => {
   return (
@@ -15,7 +15,7 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <>
-          <HeaderSection />
+          <PresentationSection />
           <SkillsSection />
           <ProjectsSection />
         <footer className={styles.footer}></footer>
