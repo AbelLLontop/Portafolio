@@ -1,19 +1,22 @@
-import React from 'react'
-import CircleDecorator from 'components/ui/CircleDecorator'
-import styles from './index.module.scss'
+import React from "react";
+import styles from "./index.module.scss";
+import { projectList } from "consts/projects";
+import Project from "./Project";
 
 const ProjectsSection = () => {
   return (
     <section className={styles.skillsSection}>
-   
-     
-    <header>
-      <h2 className={styles.title}>Proyectos</h2>
-      <p>Algunos de los lenguajes que logre aprender</p>
-    </header>
-   
-  </section>
-  )
-}
+      <header className={styles.header}>
+        <h2 className={styles.title}>Proyectos</h2>
+        <p className={styles.description}>Algunos de los lenguajes que logre aprender</p>
+      </header>
+      <section className={styles.projects}>
+        {projectList.map((project) => (
+          <Project key={project.name} project={project} />
+        ))}
+      </section>
+    </section>
+  );
+};
 
-export default ProjectsSection
+export default ProjectsSection;

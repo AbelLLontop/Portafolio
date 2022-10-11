@@ -1,8 +1,9 @@
 @import 'styles/colors.module.scss';
+@import 'styles/common.module.scss';
 .skillsSection{
     min-height: 100vh;  
     color:$color-text;
-    header{
+    .header{
         margin-top:4rem;
     }
     .title{
@@ -14,11 +15,25 @@
         text-align: center;
     }
 
-    p{
+    .description{
         text-align: center;
         padding: 1rem;
         color:$color-text-opaque;
         font-weight: lighter;
+    }
+
+    .projects{
+@extend .container;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap:1rem;
+        @media (max-width: $lg) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (max-width: $sm) {
+            grid-template-columns: repeat(1, 1fr);
+            justify-items: center;
+        }
     }
 
   }

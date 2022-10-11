@@ -1,0 +1,106 @@
+@import 'styles/colors.module.scss';
+
+.project {
+
+  width: 100%;
+  height: 100%;
+  max-width: 400px;
+  background-color: rgba(0, 0, 0, 0.268);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 1s ease;
+  &:hover{
+    .options{
+       
+      background-color: rgba(0, 0, 0, 0.549);
+      .option{
+        opacity: 1;
+        color:black;
+        background-color: rgba(255, 255, 255, 0.899);
+        cursor: pointer;
+        &:hover{
+          transform:scale(1.1);
+          color:rgba(0, 0, 0, 0.849);
+          background-color: rgba(255, 255, 255, 0.836);
+          border:solid 4px rgb(0, 208, 255);
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+  .header{
+
+    padding: 1.8rem 1rem;
+    display: flex;
+    flex-direction: column;
+    .title{
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: rgb(232, 232, 232);
+      text-align: center;
+      padding-bottom: 1rem;
+    }
+    .description{
+      color: rgb(190, 189, 189);
+      font-weight: lighter;
+      display: block;
+      display: -webkit-box;
+      font-size: 0.8rem;
+      -webkit-line-clamp: 4;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      width: 100%;
+      -webkit-box-orient: vertical;
+    }
+    .skills{
+      padding-top: 1rem;
+      display: flex;
+      gap: 1rem;
+      font-size: 1rem;
+      justify-content: center;
+    }
+  }
+  .options{
+    transition: all .4s ease;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap:1rem;
+    padding: 1rem;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    left: 0;
+    top: 0;
+    .option{
+      transition: opacity 1s ease;
+      opacity: 0;
+      width: 2.8rem;
+      height: 2.8rem;
+      color: black;
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      border-radius: 50%;
+      background-color: rgb(255, 255, 255);
+    }
+  }
+  .imageContent {
+    position: relative;
+  }
+  .date{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 1rem;
+  }
+  .mouse{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 1rem;
+    font-size: 2rem;
+  }
+}
