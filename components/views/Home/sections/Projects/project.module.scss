@@ -9,6 +9,8 @@
   border-radius: 1rem;
   overflow: hidden;
   transition: all 1s ease;
+  display: flex;
+  flex-direction: column;
   &:hover{
     .options{
        
@@ -29,10 +31,11 @@
     }
   }
   .header{
-
+    height: 100%;
     padding: 1.8rem 1rem;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     .title{
       font-size: 1.2rem;
       font-weight: bold;
@@ -94,7 +97,10 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    padding: 1rem;
+    padding: 0.8rem;
+    background: #00000000;
+    color: #acacac;
+    font-size: .8rem;
   }
   .mouse{
     position: absolute;

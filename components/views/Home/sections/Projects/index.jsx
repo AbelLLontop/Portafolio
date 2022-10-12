@@ -8,7 +8,7 @@ const ProjectsSection = () => {
     <section className={styles.skillsSection}>
       <header className={styles.header}>
         <h2 className={styles.title}>Proyectos</h2>
-        <p className={styles.description}>Algunos de los lenguajes que logre aprender</p>
+        <p className={styles.description}>Algunos de mis proyectos personales</p>
       </header>
       <section className={styles.projects}>
         {projectList.map((project) => (

@@ -11,13 +11,13 @@ const Project = ({ project }) => {
       <div className={styles.imageContent}>
         <Image
           layout="responsive"
-          objectFit="cover"
+          objectFit={project.objectFit?project.objectFit:"cover"}
           width={396}
           height={256}
           src={project.image}
           alt={project.name}
         />
-        <span className={styles.date}>11/12/2022</span>
+        <span className={styles.date}>{project.date}</span>
         <div className={styles.options}>
           <a
             href={project.repo}
@@ -41,9 +41,11 @@ const Project = ({ project }) => {
         </div>
       </div>
       <header className={styles.header}>
+        <div>
         <h3 className={styles.title}>{project.name}</h3>
-
         <p className={styles.description}>{project.description}</p>
+        </div>
+
         <div className={styles.skills}>
           {project.skills.map((skill) => (
             <div key={skill.name}>{skill.icon}</div>
