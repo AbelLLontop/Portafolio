@@ -1,5 +1,6 @@
 import Head from "next/head";
 import React from "react";
+import Footer from "../Footer";
 
 const HeadLayout = ({ title, children }) => {
   return (
@@ -11,6 +12,7 @@ const HeadLayout = ({ title, children }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {children}
+      <Footer/>
     </>
   );
 };

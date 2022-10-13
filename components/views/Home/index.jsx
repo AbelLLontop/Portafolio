@@ -11,7 +11,6 @@ const Home = () => {
       <PresentationSection />
       <SkillsSection />
       <ProjectsSection />
-      <footer className={styles.footer}></footer>
     </HeadLayout>
   );
 };

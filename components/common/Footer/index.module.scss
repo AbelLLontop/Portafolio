@@ -1,0 +1,48 @@
+@import "styles/common.module.scss";
+.footer {
+  width: 100%;
+  padding: 4rem 0;
+  background: #090a15;
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+    gap: 1rem;
+    .header {
+      color: rgb(130, 130, 130);
+      text-align: center;
+      font-size: 0.8rem;
+      padding-top: 1rem;
+      padding-bottom: .4rem;
+      .title {
+        color: #dddddd9a;
+        font-size: 1rem;
+        font-weight: lighter;
+      }
+    }
+    .socialNetwork {
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.659);
+      display: flex;
+      gap: 0.4rem;
+      padding: 1rem 0;
+      justify-content: center;
+      flex-wrap: wrap;
+      .socialNetworkItem {
+        font-size: 1rem;
+        width: 3rem;
+        background: #ffffff08;
+        height: 3rem;
+        border-radius: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+            background: #131539;
+        }
+      }
+    }
+  }
+}

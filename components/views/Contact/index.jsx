@@ -7,11 +7,9 @@ const Contact = () => {
     <HeadLayout title="Portafolio | Contact">
       <div className={styles.app}>
         <div className={styles.container}>
-          <main className={styles.main}>
+          <main className={styles.main}> 
             <HeaderSection />
           </main>
-
-          <footer className={styles.footer}></footer>
         </div>
       </div>
     </HeadLayout>

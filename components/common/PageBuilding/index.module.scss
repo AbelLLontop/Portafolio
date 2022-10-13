@@ -1,0 +1,13 @@
+@import "styles/colors.module.scss";
+.pageBuilding {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .message{
+    display: flex;
+    color: white;
+    font-size: 2rem;
+  }
+}
