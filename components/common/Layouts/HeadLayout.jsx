@@ -12,7 +12,6 @@ const HeadLayout = ({ title, children }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {children}
-      <Footer/>
     </>
   );
 };
