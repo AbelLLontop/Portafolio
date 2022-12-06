@@ -13,7 +13,6 @@ const PresentationSection = () => {
 
   return (
     <div className={styles.container}>
-        <a href="#footer">FOOOOTER</a>
       <HeaderAnimation />
       <section className={styles.headerSection}>
         <motion.article
